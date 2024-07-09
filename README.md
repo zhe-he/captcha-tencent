@@ -4,12 +4,12 @@
 ## how to use
 
 ```typescript
-import { TCaptcha, load } from "captcha-tencent";
+import { tCaptcha, load } from "captcha-tencent";
 
 // 预加载
 // useEffect(() => { load() }, []);
 
-TCaptcha("您的CaptchaAppId", {}).then(res => {
+tCaptcha("您的CaptchaAppId", {}).then(res => {
   console.log(res);
 }).catch(e => {
   console.log(e.message);
@@ -18,7 +18,7 @@ TCaptcha("您的CaptchaAppId", {}).then(res => {
 // or
 
 try {
-  const res = await TCaptcha("您的CaptchaAppId", {});
+  const res = await tCaptcha("您的CaptchaAppId", {});
   console.log(res);
 } catch(e) {
   console.log(e.message);

@@ -20,7 +20,7 @@ function load() {
     });
 }
 
-function TCaptcha(id, options) {
+function tCaptcha(id, options) {
     return new Promise((resolve, reject) => {
         try {
             load().then(C => new C(id, resolve, options)).catch(e => reject(e));
@@ -30,5 +30,5 @@ function TCaptcha(id, options) {
     });
 }
 
-exports.TCaptcha = TCaptcha;
 exports.load = load;
+exports.tCaptcha = tCaptcha;
