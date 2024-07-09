@@ -1,0 +1,30 @@
+{
+  "name": "captcha-tencent",
+  "version": "1.0.0",
+  "description": "我个人是不太喜欢往window上挂东西，所以用模块来代替我不喜欢的方式",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./src/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "keywords": [
+    "tencent",
+    "captcha",
+    "TencentCaptcha"
+  ],
+  "author": "zhe-he",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhe-he/captcha-tencent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhe-he/captcha-tencent.git/issues"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^4.18.1"
+  }
+}
