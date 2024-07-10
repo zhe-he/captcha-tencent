@@ -20,14 +20,8 @@ function load() {
     });
 }
 
-function tCaptcha(id, options) {
-    return new Promise((resolve, reject) => {
-        try {
-            load().then(C => new C(id, resolve, options)).catch(e => reject(e));
-        } catch(e) {
-            reject(e);
-        }
-    });
+function tCaptcha(id, callback, options) {
+    return new window.TencentCaptcha(id, callback, options);
 }
 
 exports.load = load;

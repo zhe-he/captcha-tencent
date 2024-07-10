@@ -18,12 +18,6 @@ export function load() {
     });
 }
 
-export function tCaptcha(id, options) {
-    return new Promise((resolve, reject) => {
-        try {
-            load().then(C => new C(id, resolve, options)).catch(e => reject(e));
-        } catch(e) {
-            reject(e);
-        }
-    });
+export function tCaptcha(id, callback, options) {
+    return new window.TencentCaptcha(id, callback, options);
 }

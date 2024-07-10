@@ -6,23 +6,12 @@
 ```typescript
 import { tCaptcha, load } from "captcha-tencent";
 
-// 预加载
-// useEffect(() => { load() }, []);
+// 加载
+await load();
 
-tCaptcha("您的CaptchaAppId", {}).then(res => {
-  console.log(res);
-}).catch(e => {
-  console.log(e.message);
-})
+const a = tCaptcha("您的CaptchaAppId", callback, {});
+a.show();
 
-// or
-
-try {
-  const res = await tCaptcha("您的CaptchaAppId", {});
-  console.log(res);
-} catch(e) {
-  console.log(e.message);
-}
 ```
 
 ### more
