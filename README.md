@@ -12,6 +12,19 @@ await load();
 const a = tCaptcha("您的CaptchaAppId", callback, {});
 a.show();
 
+// 卸载
+unload();
+
+
+// use react
+useEffect(() => {
+    load();
+
+    return () => {
+        unload();
+    }
+}, []);
+
 ```
 
 ### more

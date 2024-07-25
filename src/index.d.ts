@@ -30,4 +30,5 @@ declare global {
 }
 
 export const load: () => Promise<typeof window.TencentCaptcha>;
+export const unload: () => void;
 export const tCaptcha: (id: string, callback: (result: ICaptchaResult) => void, options: Partial<TCaptchaOptions>) => any;
